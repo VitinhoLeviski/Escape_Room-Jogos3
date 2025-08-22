@@ -6,8 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class UI_Manager : MonoBehaviour
 {
-    [SerializeField] private GameObject starterMenu;
-    [SerializeField] private GameObject setMenu;
+    [SerializeField] private GameObject PNG_starterMenu;
     [SerializeField] private GameObject starterMenuButtons;
     [SerializeField] private GameObject setMenuButtons;
 
@@ -27,10 +26,19 @@ public class UI_Manager : MonoBehaviour
         SceneManager.LoadScene("CutScene");
     }
 
-    public void SetttingsMenuImage () {
+    public void SettingsMenu () {
         starterMenuButtons.SetActive(false);
         setMenuButtons.SetActive(true);
     }
 
-
+    public void backStarterMenu()
+    {
+        starterMenuButtons.SetActive(true);
+        setMenuButtons.SetActive(false);
+    }
+    public void closeGame()
+    {
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
 }
