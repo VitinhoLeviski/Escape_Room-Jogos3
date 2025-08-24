@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{e5b2f923-6073-4b9d-bfac-d788c0ce1b4d}">
+		<property name="assetPath">
+			<value>634876__digimistic__game-menu-select-sound.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.4427210884353743</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f470c91-5369-4f48-8952-ee171fb74fbe}</destination>
+		</relationship>
+	</object>
+</objects>

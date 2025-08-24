@@ -1,16 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using UnityEngine.InputSystem;
+using UnityEngine.Events;
 using UnityEngine.UI;
+using FMODUnity;
+using FMOD.Studio;
 using UnityEngine.SceneManagement;
+
+
 
 public class UI_Manager : MonoBehaviour
 {
+    public EventReference menuSound;
+    public EventReference starGameSound;
     [SerializeField] private GameObject PNG_starterMenu;
     [SerializeField] private GameObject starterMenuButtons;
-    [SerializeField] private GameObject setMenuButtons;
+    [SerializeField] private GameObject settingsMenuButtons;
 
-    // Start is called before the first frame update
+
+
+    //Funções da Unity gerais
+
+
+
     void Start()
     {
         
@@ -19,22 +32,43 @@ public class UI_Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
-    public void Play() {
+    public void game()
+    {
         SceneManager.LoadScene("CutScene");
     }
 
-    public void SettingsMenu () {
+
+
+    //botões do menu
+
+
+
+    public void SettingsMenu()
+    {
+        RuntimeManager.PlayOneShot(menuSound);
         starterMenuButtons.SetActive(false);
-        setMenuButtons.SetActive(true);
+        settingsMenuButtons.SetActive(true);
     }
 
     public void backStarterMenu()
     {
-        starterMenuButtons.SetActive(true);
-        setMenuButtons.SetActive(false);
+        RuntimeManager.PlayOneShot(menuSound);
+        starterMenuButtons.SetActive(true);    
+    }
+
+
+
+    //trocar de cenas
+
+
+
+    public void Play()
+    {
+        RuntimeManager.PlayOneShot(starGameSound);
+        Invoke("game", 2f);
     }
     public void closeGame()
     {
