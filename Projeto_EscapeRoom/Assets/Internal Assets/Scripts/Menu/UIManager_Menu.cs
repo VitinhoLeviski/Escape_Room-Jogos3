@@ -8,19 +8,19 @@ using FMODUnity;
 using FMOD.Studio;
 using UnityEngine.SceneManagement;
 
-
-
-public class UI_Manager : MonoBehaviour
+public class UIManager_Menu : MonoBehaviour
 {
-    public EventReference menuSound;
-    public EventReference starGameSound;
+    [SerializeField] Button playButton;
+    [SerializeField] Button setButton;
+    [SerializeField] EventReference menuSound;
+    [SerializeField] EventReference starGameSound;
     [SerializeField] private GameObject PNG_starterMenu;
     [SerializeField] private GameObject starterMenuButtons;
     [SerializeField] private GameObject settingsMenuButtons;
 
 
 
-    //Funções da Unity gerais
+    //Funções da Unity 
 
 
 
@@ -29,15 +29,14 @@ public class UI_Manager : MonoBehaviour
         
     }
 
-    // Update is called once per frame
     void Update()
     {
 
     }
 
-    public void game()
+    public void startGame()
     {
-        SceneManager.LoadScene("CutScene");
+        SceneManager.LoadScene("cutScene");
     }
 
 
@@ -56,7 +55,8 @@ public class UI_Manager : MonoBehaviour
     public void backStarterMenu()
     {
         RuntimeManager.PlayOneShot(menuSound);
-        starterMenuButtons.SetActive(true);    
+        starterMenuButtons.SetActive(true);
+        settingsMenuButtons.SetActive(false);
     }
 
 
@@ -68,11 +68,12 @@ public class UI_Manager : MonoBehaviour
     public void Play()
     {
         RuntimeManager.PlayOneShot(starGameSound);
-        Invoke("game", 2f);
+        Invoke("startGame", 2f);
+        playButton.interactable = false;
+        setButton.interactable = false;
     }
     public void closeGame()
     {
-        Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
     }
 }
