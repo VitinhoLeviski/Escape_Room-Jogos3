@@ -5,7 +5,7 @@ using UnityEngine.Events;
 public class Move_player : MonoBehaviour
 {
 
-    public CharacterController controller;
+    public CharacterController player_actions;
     public float speed = 12f;
     public float gravity = -9.81f;
 
@@ -25,16 +25,16 @@ public class Move_player : MonoBehaviour
     {
         // Movimento no plano horizontal
         Vector3 move = transform.right * horizontalInput + transform.forward * verticalInput;
-        controller.Move(move * speed * Time.deltaTime);
+        player_actions.Move(move * speed * Time.deltaTime);
 
         // Aplica gravidade
-        if (controller.isGrounded && verticalVelocity < 0)
+        if (player_actions.isGrounded && verticalVelocity < 0)
             verticalVelocity = -2f; // pequena força para manter no chão
         else
             verticalVelocity += gravity * Time.deltaTime;
 
         velocity.y = verticalVelocity;
-        controller.Move(velocity * Time.deltaTime);
+        player_actions.Move(velocity * Time.deltaTime);
     }
 
     public void OnMoveEvent(InputAction.CallbackContext context)
