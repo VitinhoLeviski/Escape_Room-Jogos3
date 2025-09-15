@@ -5,11 +5,10 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
-using UnityEngine.UIElements;
 
 public class Interaction : MonoBehaviour
 {
-    public float rayDistance = 3f;
+    public float rayDistance = 2f;
     public float rotateSpeed = 200;
     public float rotX, rotY;
     public bool interEnter, interExit;
@@ -19,7 +18,7 @@ public class Interaction : MonoBehaviour
     public UnityEvent OnView;
     public UnityEvent OnFinishView;
 
-    private Camera myCam;
+    public Camera myCam;
 
     private bool isViewing;
     private bool canFinish;
@@ -30,12 +29,6 @@ public class Interaction : MonoBehaviour
     private Quaternion originRotation;
     private Inventory inventory;
 
-    void Start()
-    {
-        myCam = Camera.main;
-    }
-
-
     private void Awake()
     {
         inventory = GetComponent<Inventory>();
@@ -44,6 +37,7 @@ public class Interaction : MonoBehaviour
     void Update()
     {
         CheckInteractables();
+        CheckInteractables();//coco
     }
 
     void CheckInteractables()
@@ -66,13 +60,21 @@ public class Interaction : MonoBehaviour
         RaycastHit hit;
         Vector3 rayOrigin = myCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
 
-
+<<<<<<< HEAD
         if (Physics.Raycast(rayOrigin, myCam.transform.forward, out hit, rayDistance, ~0))
         {
-
             Interactables interactable = hit.collider.GetComponent<Interactables>();
-
             if (interactable != null)//se for interagivel
+=======
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
+        if (Physics.Raycast(rayOrigin, myCam.transform.forward, out hit, rayDistance))
+        {
+            Interactables interactable = hit.collider.GetComponent<Interactables>();
+            if (interactable != null)//se for inetragivel
+>>>>>>> d6bc938bd40364ea8f53eada1a5e2bb90307ac66
             {
                 UIManager.instance.SetHandCursor(true);
                 //UIManager.instance.SetButtonEnter(true);
