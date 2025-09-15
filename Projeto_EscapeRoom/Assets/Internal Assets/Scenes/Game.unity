@@ -192,11 +192,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5752935}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.6961237, y: 0.36343792, z: 0.45255342}
-  m_Center: {x: 0.0011171699, y: -0.011330188, z: 0.22683448}
+  m_Size: {x: 0.6961236, y: 0.3998179, z: 0.67806524}
+  m_Center: {x: 0.001117158, y: -0.02952021, z: 0.3395909}
 --- !u!1 &30420536 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -3064283046625133918, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
@@ -574,7 +574,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 113382817}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 2.3785965, y: 0.5374199, z: 1.7339414}
@@ -901,32 +901,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8168945622396535897, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
   m_PrefabInstance: {fileID: 2937824949570952814}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &153087107
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153087098}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 82b0e9b581b432144895e363b9a83541, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rayDistance: 2
-  rotateSpeed: 200
-  rotX: 0
-  rotY: 0
-  interEnter: 0
-  interExit: 0
-  objectViewer: {fileID: 1130833814}
-  OnView:
-    m_PersistentCalls:
-      m_Calls: []
-  OnFinishView:
-    m_PersistentCalls:
-      m_Calls: []
-  myCam: {fileID: 152648305}
 --- !u!114 &153087114
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -941,6 +915,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   winCondition: []
   itens: []
+--- !u!114 &153087120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153087098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 82b0e9b581b432144895e363b9a83541, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayDistance: 3
+  rotateSpeed: 200
+  rotX: 0
+  rotY: 0
+  interEnter: 0
+  interExit: 0
+  objectViewer: {fileID: 1130833814}
+  OnView:
+    m_PersistentCalls:
+      m_Calls: []
+  OnFinishView:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &155558796
 GameObject:
   m_ObjectHideFlags: 0
@@ -6604,7 +6603,11 @@ Transform:
   m_GameObject: {fileID: 506479547}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: -750.4204, y: 53.01312, z: -1285.2}
+<<<<<<< HEAD
   m_LocalScale: {x: 100, y: 100.000084, z: 100.000084}
+=======
+  m_LocalScale: {x: 100, y: 100.00008, z: 100.00008}
+>>>>>>> b14c811bdb15c4d0b2c3ae0bcce19a691e299fd5
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1775211827}
@@ -35826,6 +35829,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 158786863, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_Depth
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 158786863, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: m_RenderingPath
       value: -1
       objectReference: {fileID: 0}
@@ -35849,6 +35856,10 @@ PrefabInstance:
       propertyPath: gravity
       value: -29.9
       objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 152648305}
     - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: m_ActionEvents.Array.size
       value: 4
@@ -35888,11 +35899,11 @@ PrefabInstance:
     - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 153087107}
+      objectReference: {fileID: 0}
     - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 153087107}
+      objectReference: {fileID: 0}
     - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
