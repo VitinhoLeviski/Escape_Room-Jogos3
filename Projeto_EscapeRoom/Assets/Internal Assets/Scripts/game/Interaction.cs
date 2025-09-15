@@ -19,7 +19,7 @@ public class Interaction : MonoBehaviour
     public UnityEvent OnView;
     public UnityEvent OnFinishView;
 
-    private Camera myCam;
+    public Camera myCam;
 
     private bool isViewing;
     private bool canFinish;
@@ -66,12 +66,9 @@ public class Interaction : MonoBehaviour
         RaycastHit hit;
         Vector3 rayOrigin = myCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
 
-
-        if (Physics.Raycast(rayOrigin, myCam.transform.forward, out hit, rayDistance, ~0))
+        if (Physics.Raycast(rayOrigin, myCam.transform.forward, out hit, rayDistance))
         {
-
             Interactables interactable = hit.collider.GetComponent<Interactables>();
-
             if (interactable != null)//se for interagivel
             {
                 UIManager.instance.SetHandCursor(true);
