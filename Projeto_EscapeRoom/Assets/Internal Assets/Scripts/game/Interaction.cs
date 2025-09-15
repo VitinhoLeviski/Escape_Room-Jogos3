@@ -37,7 +37,6 @@ public class Interaction : MonoBehaviour
     void Update()
     {
         CheckInteractables();
-        CheckInteractables();//coco
     }
 
     void CheckInteractables()
@@ -60,21 +59,10 @@ public class Interaction : MonoBehaviour
         RaycastHit hit;
         Vector3 rayOrigin = myCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
 
-<<<<<<< HEAD
-        if (Physics.Raycast(rayOrigin, myCam.transform.forward, out hit, rayDistance, ~0))
-        {
-            Interactables interactable = hit.collider.GetComponent<Interactables>();
-            if (interactable != null)//se for interagivel
-=======
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         if (Physics.Raycast(rayOrigin, myCam.transform.forward, out hit, rayDistance))
         {
             Interactables interactable = hit.collider.GetComponent<Interactables>();
-            if (interactable != null)//se for inetragivel
->>>>>>> d6bc938bd40364ea8f53eada1a5e2bb90307ac66
+            if (interactable != null)//se for interagivel
             {
                 UIManager.instance.SetHandCursor(true);
                 //UIManager.instance.SetButtonEnter(true);
@@ -268,3 +256,4 @@ public class Interaction : MonoBehaviour
         }
     }
 }
+
