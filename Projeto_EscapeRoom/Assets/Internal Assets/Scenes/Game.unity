@@ -33633,7 +33633,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7450357514975872388, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: m_SlopeLimit
-      value: 70.5
+      value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 8168945622396535897, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: m_RootOrder
