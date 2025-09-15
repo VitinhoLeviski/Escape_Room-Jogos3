@@ -5,10 +5,11 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.UIElements;
 
 public class Interaction : MonoBehaviour
 {
-    public float rayDistance = 2f;
+    public float rayDistance = 3f;
     public float rotateSpeed = 200;
     public float rotX, rotY;
     public bool interEnter, interExit;
@@ -28,6 +29,12 @@ public class Interaction : MonoBehaviour
     private Vector3 originPosition;
     private Quaternion originRotation;
     private Inventory inventory;
+
+    void Start()
+    {
+        myCam = Camera.main;
+    }
+
 
     private void Awake()
     {
@@ -62,7 +69,7 @@ public class Interaction : MonoBehaviour
         if (Physics.Raycast(rayOrigin, myCam.transform.forward, out hit, rayDistance))
         {
             Interactables interactable = hit.collider.GetComponent<Interactables>();
-            if (interactable != null)//se for inetragivel
+            if (interactable != null)//se for interagivel
             {
                 UIManager.instance.SetHandCursor(true);
                 //UIManager.instance.SetButtonEnter(true);
