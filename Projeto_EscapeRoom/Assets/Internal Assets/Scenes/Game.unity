@@ -192,7 +192,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5752935}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.66444343, y: 0.3467635, z: 0.4262171}
@@ -922,7 +922,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82b0e9b581b432144895e363b9a83541, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 2
+  rayDistance: 100
   rotateSpeed: 200
   rotX: 0
   rotY: 0
@@ -34006,6 +34006,10 @@ PrefabInstance:
     - target: {fileID: 975849813, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: gravity
       value: -29.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849819, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2991968586631265488, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: m_Name

@@ -65,6 +65,8 @@ public class Interaction : MonoBehaviour
             if (interactable != null)//se for interagivel
             {
                 UIManager.instance.SetHandCursor(true);
+                Debug.DrawRay(rayOrigin, myCam.transform.forward * rayDistance, Color.red);
+
                 //UIManager.instance.SetButtonEnter(true);
                 if (interEnter)//inicia a interação
                 {
