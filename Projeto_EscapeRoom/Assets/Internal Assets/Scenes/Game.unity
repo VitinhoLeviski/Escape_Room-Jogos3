@@ -930,7 +930,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 153087111}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
@@ -942,7 +942,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
   OnFinishView:
     m_PersistentCalls:
@@ -957,7 +957,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 153087111}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
@@ -969,7 +969,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   myCam: {fileID: 152648305}
 --- !u!114 &153087111 stripped
@@ -6180,7 +6180,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 800, y: 800}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &466428779 stripped
 GameObject:
@@ -34261,11 +34261,87 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975849813, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: speed
-      value: 120.19
+      value: 121.37
       objectReference: {fileID: 0}
     - target: {fileID: 975849813, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: gravity
       value: -29.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionId
+      value: 3f321eac-3058-4b13-a61f-92b7b224c5d9
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionId
+      value: 6a7496ef-800b-435e-930b-d3ff3e642378
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_ActionName
+      value: Player/InteractionEnter[/Mouse/leftButton,/Keyboard/e]
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_ActionName
+      value: Player/InteractionExit[/Mouse/rightButton,/Keyboard/q]
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 153087107}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 153087107}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InteractionEnter
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: InteractionExit
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Interaction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Interaction, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[2].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 975849814, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
+      propertyPath: m_ActionEvents.Array.data[3].m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 975849819, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: m_CollisionDetection
