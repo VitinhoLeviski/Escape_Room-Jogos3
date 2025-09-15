@@ -59,14 +59,10 @@ public class Interaction : MonoBehaviour
         RaycastHit hit;
         Vector3 rayOrigin = myCam.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0.5f));
 
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes
         if (Physics.Raycast(rayOrigin, myCam.transform.forward, out hit, rayDistance))
         {
             Interactables interactable = hit.collider.GetComponent<Interactables>();
-            if (interactable != null)//se for inetragivel
+            if (interactable != null)//se for interagivel
             {
                 UIManager.instance.SetHandCursor(true);
                 //UIManager.instance.SetButtonEnter(true);
