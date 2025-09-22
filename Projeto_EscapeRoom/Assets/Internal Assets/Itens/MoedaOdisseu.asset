@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65184b73c09377d4bb96838c3a073031, type: 3}
-  m_Name: MoedaUm
+  m_Name: MoedaOdisseu
   m_EditorClassIdentifier: 
   requiredItem: 0
-  grabbable: 0
+  grabbable: 1
   text: 
   image: {fileID: 0}
   InventoryItem: 0

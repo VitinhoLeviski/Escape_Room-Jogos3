@@ -124,14 +124,14 @@ public class Interaction : MonoBehaviour
             {
                 UIManager.instance.SetHandCursor(false);
               //  UIManager.instance.SetButtonEnter(false);
-              //  UIManager.instance.SetButtonExit(false);
+              UIManager.instance.SetBackImage(false);
             }
         }
         else
         {
             UIManager.instance.SetHandCursor(false);
            // UIManager.instance.SetButtonEnter(false);
-           // UIManager.instance.SetButtonExit(false);
+           UIManager.instance.SetBackImage(false);
         }
     }
 
@@ -161,7 +161,7 @@ public class Interaction : MonoBehaviour
         }
         else
         {
-          //  UIManager.instance.SetButtonExit(true);
+          UIManager.instance.SetBackImage(true);
         }
 
         UIManager.instance.SetCaptions("");
@@ -171,8 +171,8 @@ public class Interaction : MonoBehaviour
     {
         canFinish = false;
         isViewing = false;
-       // UIManager.instance.SetButtonExit(false);
-       // UIManager.instance.SetButtonEnter(false);
+       UIManager.instance.SetBackImage(false);
+       //UIManager.instance.SetButtonEnter(false);
         UIManager.instance.SetHandCursor(false);
 
         if (currentItem.InventoryItem)
@@ -217,16 +217,8 @@ public class Interaction : MonoBehaviour
     {
         float x = rotX;
         float y = rotY;
-        currentInteractable.transform.Rotate(
-            myCam.transform.right,
-            -Mathf.Deg2Rad * y * rotateSpeed,
-            Space.World
-        );
-        currentInteractable.transform.Rotate(
-            myCam.transform.up,
-            -Mathf.Deg2Rad * x * rotateSpeed,
-            Space.World
-        );
+        currentInteractable.transform.Rotate(myCam.transform.right,-Mathf.Deg2Rad * y * rotateSpeed,Space.World);
+        currentInteractable.transform.Rotate(myCam.transform.up,-Mathf.Deg2Rad * x * rotateSpeed,Space.World);
     }
 
     //InputActions
