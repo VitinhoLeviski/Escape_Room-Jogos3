@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: MoedaOdisseu
   m_EditorClassIdentifier: 
   requiredItem: 0
-  grabbable: 0
+  grabbable: 1
   text: 
-  image: {fileID: 21300000, guid: 0dad448f4869ec94ba8139fc2cde09e8, type: 3}
+  image: {fileID: 0}
   InventoryItem: 0
-  collectMessage: Uma moeda de odisseus
+  collectMessage: 
