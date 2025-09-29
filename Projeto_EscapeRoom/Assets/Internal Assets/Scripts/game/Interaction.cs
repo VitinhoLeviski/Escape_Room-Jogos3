@@ -249,5 +249,7 @@ public class Interaction : MonoBehaviour
             interExit = false;
         }
     }
+
+
 }
 
