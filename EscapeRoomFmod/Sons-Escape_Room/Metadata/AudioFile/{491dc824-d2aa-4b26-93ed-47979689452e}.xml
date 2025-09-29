@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{491dc824-d2aa-4b26-93ed-47979689452e}">
+		<property name="assetPath">
+			<value>750458__robinhood76__13186-high-shine-bell.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.6718367346938776</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f470c91-5369-4f48-8952-ee171fb74fbe}</destination>
+		</relationship>
+	</object>
+</objects>

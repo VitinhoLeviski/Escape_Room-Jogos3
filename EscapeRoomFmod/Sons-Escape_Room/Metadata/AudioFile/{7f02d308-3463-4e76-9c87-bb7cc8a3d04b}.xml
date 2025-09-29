@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{7f02d308-3463-4e76-9c87-bb7cc8a3d04b}">
+		<property name="assetPath">
+			<value>131657__bertrof__game-sound-wrong.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>2.4032653061224489</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f470c91-5369-4f48-8952-ee171fb74fbe}</destination>
+		</relationship>
+	</object>
+</objects>
