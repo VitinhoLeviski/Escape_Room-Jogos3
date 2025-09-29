@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: "Pe\xE7a 1"
   m_EditorClassIdentifier: 
   requiredItem: 0
-  grabbable: 1
+  grabbable: 0
   text: 
-  image: {fileID: 21300000, guid: 14156cedb933ab44f995904e6a5fd24d, type: 3}
+  image: {fileID: 21300000, guid: f3d0fd0d48f5b594f8ea91943be4f273, type: 3}
   InventoryItem: 0
   collectMessage: 
-  leveranim: {fileID: 0}
