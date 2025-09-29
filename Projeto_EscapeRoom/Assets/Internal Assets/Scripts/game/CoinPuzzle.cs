@@ -10,12 +10,11 @@ public class CoinPuzzle : MonoBehaviour
     public GameObject MoedaTroia;
 
     [Header("Slots")]
-    public Transform[] slots; // Array de 5 slots (Transforms vazios ou GameObjects com colliders). Atribua no Inspector!
+    public Transform[] slots; 
 
     [Header("Puzzle Solution")]
-    [SerializeField] private CoinType[] correctCombination = new CoinType[5]; // Defina a combinação correta aqui (ex: Ithaca no slot 0, None no 1, Troia no 2, Odisseu no 3, None no 4)
-
-    // Enum para tipos de moedas (facilita identificação)
+    [SerializeField] private CoinType[] correctCombination = new CoinType[5]; 
+    // Enum para tipos de moedas 
     public enum CoinType
     {
         None,      // Slot vazio
@@ -24,13 +23,13 @@ public class CoinPuzzle : MonoBehaviour
         Troia      // Moeda de Troia
     }
 
-    // Estados dos slots: qual moeda está em cada um
+
     private CoinType[] currentCombination = new CoinType[5];
 
     // Referências para as moedas instanciadas (para remoção ou verificação)
     private GameObject[] placedCoins = new GameObject[5];
 
-    // Flag para puzzle resolvido
+    // para puzzle resolvido
     private bool puzzleSolved = false;
 
     // Lista para coletar os slots digitados pelo player (ex: 1,3,5)
@@ -50,7 +49,6 @@ public class CoinPuzzle : MonoBehaviour
             // Certifique-se de que há exatamente 5 slots
             if (i >= slots.Length)
             {
-                Debug.LogError("CoinPuzzle: Configure exatamente 5 slots no array 'slots' no Inspector!");
                 return;
             }
         }
@@ -63,8 +61,6 @@ public class CoinPuzzle : MonoBehaviour
         correctCombination[4] = CoinType.Troia;    // Slot 5 (índice 4)
 
         selectedSlots.Clear();
-        Debug.Log("CoinPuzzle iniciado. Digite 3 números (1-5) para colocar as moedas na ordem: Odisseu > Ithaca > Troia. Exemplo: 1,3,5");
-        Debug.Log("Pressione R para resetar. Pressione P para ver estado atual.");
     }
 
     void Update()
@@ -93,12 +89,6 @@ public class CoinPuzzle : MonoBehaviour
                     PlaceCoinsInSelectedSlots();
                 }
             }
-        }
-
-        // Opcional: Pressione R para resetar o puzzle (útil para testes)
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetPuzzle();
         }
 
         // Opcional: Pressione Enter para confirmar manualmente (se quiser, mas auto-confirma após 3)
