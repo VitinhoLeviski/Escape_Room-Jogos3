@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65184b73c09377d4bb96838c3a073031, type: 3}
-  m_Name: Alavanca
+  m_Name: Alavanca 4
   m_EditorClassIdentifier: 
   requiredItem: 0
   grabbable: 0
-  text: Isso deve resolver
+  text: 
   image: {fileID: 0}
   InventoryItem: 0
   collectMessage: 
-  leveranim: {fileID: 1827226128182048838, guid: 72c4ef612dba4f147990dfa54d56ad55, type: 3}
+  leveranim: {fileID: 0}
