@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CoinPuzzle : MonoBehaviour
 {
@@ -65,7 +66,7 @@ public class CoinPuzzle : MonoBehaviour
 
     void Update()
     {
-        // Captura input de teclas numéricas (1-5)
+        #if UNITY_STANDALONE || UNITY_EDITOR
         for (int i = 1; i <= 5; i++)
         {
             if (Input.GetKeyDown(KeyCode.Alpha0 + i) && selectedSlots.Count < 3 && !puzzleSolved)
@@ -96,6 +97,7 @@ public class CoinPuzzle : MonoBehaviour
         {
             PlaceCoinsInSelectedSlots();
         }
+        #endif
     }
 
 
@@ -193,4 +195,47 @@ public class CoinPuzzle : MonoBehaviour
         }
     }
 
+public void ReceiveInputSequence(string input)
+{
+    if (puzzleSolved)
+    {
+        return;
+    }
+
+    selectedSlots.Clear();
+
+    input = input.Replace(" ", " ").Replace(",","");
+
+    if(input.Length != 3)
+    {
+        return;
+    }
+
+    for(int i = 0;i < 3; i++)
+    {
+        char c = input[i];
+        if(!char.IsDigit(c))
+        {
+            return;
+        }
+    
+
+    int slotNumber = (int)char.GetNumericValue(c);
+
+    if(slotNumber < 1 || slotNumber > 5)
+    {
+        return;
+    }
+    
+    if(selectedSlots.Contains(slotNumber))
+    {
+        return;
+    }
+
+    selectedSlots.Add(slotNumber);
+
+    PlaceCoinsInSelectedSlots();
+}
+
+}
 }
