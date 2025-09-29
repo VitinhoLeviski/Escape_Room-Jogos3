@@ -15,4 +15,6 @@ public class Item : ScriptableObject
 	[Header("Inventory")]
 	public bool InventoryItem;
 	public string collectMessage;
+
+	public AnimationClip leveranim;
 }
