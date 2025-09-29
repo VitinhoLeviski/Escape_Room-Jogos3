@@ -147,7 +147,6 @@ public class Interaction : MonoBehaviour
 
         if (item.image != null)
         {
-            Debug.Log("tem imagem");
             UIManager.instance.SetImage(item.image);
         }
         UIManager.instance.SetCaptions(item.text);
