@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65184b73c09377d4bb96838c3a073031, type: 3}
-  m_Name: "Pe\xE7a 1"
+  m_Name: Alavanca 5
   m_EditorClassIdentifier: 
-  requiredItem: 1
-  grabbable: 1
-  text: a zeus marble
+  requiredItem: 0
+  grabbable: 0
+  text: 
   image: {fileID: 0}
-  InventoryItem: 1
+  InventoryItem: 0
   collectMessage: 
-  leveranim: {fileID: 0}
