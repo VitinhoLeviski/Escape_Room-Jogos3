@@ -185,6 +185,28 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.6644434, y: 0.39387, z: 0.6744578}
   m_Center: {x: 0, y: -0.026546279, z: 0.33778688}
+--- !u!114 &5752943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5752935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f3c0637727aba74287598a2ff8a9d86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoedaOdisseu: {fileID: 776474272}
+  MoedaIthaca: {fileID: 1566363928}
+  MoedaTroia: {fileID: 193251781}
+  slots:
+  - {fileID: 1566363929}
+  - {fileID: 0}
+  - {fileID: 782715807}
+  - {fileID: 0}
+  - {fileID: 193251782}
+  correctCombination: 0200000000000000010000000000000003000000
 --- !u!1 &21836085
 GameObject:
   m_ObjectHideFlags: 0
@@ -29505,6 +29527,9 @@ MonoBehaviour:
   winCondition: []
   itens:
   - {fileID: 11400000, guid: 5612a083517649940becd2d43f628cdc, type: 2}
+  - {fileID: 11400000, guid: a09f3bc98989ade4ca7a4da597e2cf69, type: 2}
+  - {fileID: 11400000, guid: c6a2840bc8c0d7149b52704e93281545, type: 2}
+  - {fileID: 11400000, guid: cd8cdf08e1a1e3144b608f2e9986e02e, type: 2}
 --- !u!1 &1549289466 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5099854789117683726, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
