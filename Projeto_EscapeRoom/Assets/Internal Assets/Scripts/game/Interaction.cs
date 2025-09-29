@@ -28,10 +28,13 @@ public class Interaction : MonoBehaviour
     private Vector3 originPosition;
     private Quaternion originRotation;
     private Inventory inventory;
+    private CoinPuzzle coinPuzzle;
 
     private void Awake()
     {
         inventory = GetComponent<Inventory>();
+
+        coinPuzzle = GetComponent<CoinPuzzle>();
     }
 
     void Update()
@@ -247,6 +250,14 @@ public class Interaction : MonoBehaviour
         else if (value.canceled)
         {
             interExit = false;
+        }
+    }
+
+    public void ResetPuzzleInput(InputAction.CallbackContext value)
+    {
+        if(value.performed && coinPuzzle != null)
+        {
+            coinPuzzle.ResetPuzzle();
         }
     }
 }
