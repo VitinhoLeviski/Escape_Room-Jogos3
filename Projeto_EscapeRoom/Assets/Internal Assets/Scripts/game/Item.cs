@@ -16,5 +16,4 @@ public class Item : ScriptableObject
 	public bool InventoryItem;
 	public string collectMessage;
 
-	public AnimationClip leveranim;
 }
