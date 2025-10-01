@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredItem: 0
   grabbable: 0
-  text: moedas blablabla
+  text: "Preciso botar as moedas na ordem certa, come\xE7ando por odisseus, depois
+    ithaca e por fim troia"
   image: {fileID: 21300000, guid: 5264e52547e6d9846ad6e51b456af52b, type: 3}
   InventoryItem: 0
   collectMessage: 
