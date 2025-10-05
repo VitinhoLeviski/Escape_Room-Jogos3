@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.InputSystem;
 
 public class UIManager : MonoBehaviour
 {
@@ -34,10 +35,10 @@ public class UIManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-		if (Input.GetKeyDown(KeyCode.I))
-		{
-			inventoryImage.SetActive(!inventoryImage.activeInHierarchy);
-		}
+	//	if (Input.GetKeyDown(KeyCode.I))
+	//	{
+	//		inventoryImage.SetActive(!inventoryImage.activeInHierarchy);
+	//	}
     }
 
 	public void SetCaptions(string text)
@@ -92,4 +93,9 @@ public class UIManager : MonoBehaviour
 			yield return null;
 		}
 	}
+
+	public void InventoryEvent(InputAction.CallbackContext context)
+	{
+        inventoryImage.SetActive(!inventoryImage.activeInHierarchy);
+    }
 }
