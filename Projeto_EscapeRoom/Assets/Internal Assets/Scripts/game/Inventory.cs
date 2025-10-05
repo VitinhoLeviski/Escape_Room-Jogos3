@@ -8,7 +8,7 @@ public class WinCondition
 {
 	public List<Item> requiredItens;
 	public List<Item> interactedItens;
-	public CutsceneController winCutscene;
+	//public CutsceneController winCutscene;
 	public bool alreadyPlayed;
 }
 
@@ -50,16 +50,12 @@ public class Inventory : MonoBehaviour
 				if (!winCondition[i].alreadyPlayed)
 				{
 					winCondition[i].alreadyPlayed = true;
-					StartCoroutine(PlayCutscene(winCondition[i].winCutscene));
+
 					break;
 				}
 			}
 		}
 	}
 
-	IEnumerator PlayCutscene(CutsceneController cutscene)
-	{
-		yield return new WaitForSeconds(1.5f);
-		cutscene.Play();
-	}
+
 }

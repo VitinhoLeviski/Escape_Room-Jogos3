@@ -8904,7 +8904,6 @@ RectTransform:
   - {fileID: 626010380}
   - {fileID: 1034392174}
   - {fileID: 1358287046}
-  - {fileID: 677040857}
   - {fileID: 707522155}
   m_Father: {fileID: 0}
   m_RootOrder: 3
@@ -9221,50 +9220,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93f01ce0b9c7bb94296c7bec02c38816, type: 3}
   m_PrefabInstance: {fileID: 663372358}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &677040855
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 677040857}
-  - component: {fileID: 677040856}
-  m_Layer: 0
-  m_Name: Pause
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &677040856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677040855}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1cd7d8a85561a04f88947c2735b4b65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &677040857
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677040855}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13599.289, y: -78.85538, z: 6187.6357}
-  m_LocalScale: {x: 2.991172, y: 2.991172, z: 2.991172}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 635990776}
-  m_RootOrder: 6
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &679674071 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6119896366987028003, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
@@ -9484,7 +9439,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 635990776}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14859,7 +14814,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 677040856}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
         m_MethodName: TogglePause
         m_Mode: 1
