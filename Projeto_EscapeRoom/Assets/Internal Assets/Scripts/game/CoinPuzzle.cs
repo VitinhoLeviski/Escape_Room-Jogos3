@@ -27,34 +27,34 @@ public class CoinPuzzle : MonoBehaviour
 
     private CoinType[] currentCombination = new CoinType[5];
 
-    // Referências para as moedas instanciadas (para remoção ou verificação)
+
     private GameObject[] placedCoins = new GameObject[5];
 
-    // para puzzle resolvido
+
     private bool puzzleSolved = false;
 
-    // Lista para coletar os slots digitados pelo player (ex: 1,3,5)
+    // Lista para coletar os slots digitados
     private List<int> selectedSlots = new List<int>();
 
-    // Ordem fixa das moedas: 1º digitado = Odisseu, 2º = Ithaca, 3º = Troia
+    // Ordem fixa
     private CoinType[] coinOrder = { CoinType.Odisseu, CoinType.Ithaca, CoinType.Troia };
 
     void Start()
     {
-        // Inicialize os slots como vazios
+  
         for (int i = 0; i < 5; i++)
         {
             currentCombination[i] = CoinType.None;
             placedCoins[i] = null;
 
-            // Certifique-se de que há exatamente 5 slots
+   
             if (i >= slots.Length)
             {
                 return;
             }
         }
 
-        // Isso significa: correctCombination[0] = Odisseu, [2] = Ithaca, [4] = Troia (slots 1,3,5 indexados como 0,2,4)
+
         correctCombination[0] = CoinType.Ithaca;  // Slot 1 (índice 0)
         correctCombination[1] = CoinType.None;     // Slot 2 vazio
         correctCombination[2] = CoinType.Odisseu;   // Slot 3 (índice 2)
@@ -92,27 +92,23 @@ public class CoinPuzzle : MonoBehaviour
             }
         }
 
-        // Opcional: Pressione Enter para confirmar manualmente (se quiser, mas auto-confirma após 3)
-        if (Input.GetKeyDown(KeyCode.Return) && selectedSlots.Count == 3 && !puzzleSolved)
-        {
-            PlaceCoinsInSelectedSlots();
-        }
+
         #endif
     }
 
 
     private void PlaceCoinsInSelectedSlots()
     {
-        // Limpa colocações anteriores (se houver)
-        ResetPuzzle(false); // Reset sem limpar selectedSlots
+        // Limpa colocações anteriores
+        ResetPuzzle(false); 
 
         for (int i = 0; i < 3; i++)
         {
             int slotNumber = selectedSlots[i];
             int slotIndex = slotNumber - 1;
-            CoinType coinType = coinOrder[i]; // Odisseu (0), Ithaca (1), Troia (2)
+            CoinType coinType = coinOrder[i]; 
 
-            // Coloca a moeda
+  
             GameObject coinPrefab = GetCoinPrefab(coinType);
             if (coinPrefab != null)
             {
@@ -126,18 +122,18 @@ public class CoinPuzzle : MonoBehaviour
             }
         }
 
-        // Verifica a solução imediatamente
+  
         CheckSolution();
 
-        // Limpa os selectedSlots para próxima tentativa (se errado)
+        // Limpa os selectedSlots
         if (!puzzleSolved)
         {
             selectedSlots.Clear();
-            Debug.Log("Tentativa processada. Tente novamente com outra combinação.");
+
         }
     }
 
-    // Verifica se a combinação atual é a correta
+
     private void CheckSolution()
     {
         bool isCorrect = true;
@@ -153,15 +149,15 @@ public class CoinPuzzle : MonoBehaviour
         if (isCorrect)
         {
             puzzleSolved = true;
-            Debug.Log("Enigma resolvido! A ordem digitada está correta: " + string.Join(", ", selectedSlots));
+            Debug.Log("Enigma resolvido!");
         }
         else
         {
-            Debug.Log("Combinação incorreta. A ordem das moedas não matches a solução. Tente novamente.");
+            
         }
     }
 
-    // Reseta o puzzle (limpa moedas e estados)
+    // Reseta o puzzle
     public void ResetPuzzle(bool clearSelected = true)
     {
         for (int i = 0; i < 5; i++)
@@ -180,10 +176,10 @@ public class CoinPuzzle : MonoBehaviour
         }
 
         puzzleSolved = false;
-        Debug.Log("Puzzle resetado. Digite uma nova combinação de 3 slots (1-5).");
+
     }
 
-    // Retorna o prefab baseado no tipo de moeda
+
     private GameObject GetCoinPrefab(CoinType type)
     {
         switch (type)
