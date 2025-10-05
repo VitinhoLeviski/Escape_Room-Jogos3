@@ -173,6 +173,17 @@
                 },
                 {
                     "name": "",
+                    "id": "16360cea-7d82-4cf4-8e61-db3288761b1f",
+                    "path": "<Touchscreen>/touch1/indirectTouch",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "InteractionEnter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "05b8d719-094a-4e4f-95b7-86bf6d5a6144",
                     "path": "<Mouse>/rightButton",
                     "interactions": "",
