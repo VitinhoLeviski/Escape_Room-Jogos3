@@ -1,17 +1,17 @@
-using System.Collections;
+using System.Collections; 
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using FMODUnity;
+using FMODUnity;        // Necessário para acessar EventReference e RuntimeManager
 
 public class Lever : MonoBehaviour
 {
     [Header("Configuração da Alavanca")]
-    public Item item;                         
-    public UnityEvent onLeverPulled;          
-    public UnityEvent onLeverReset;           
+    public Item item;                         // Referência ao Item usado pelo sistema de interação
+    public UnityEvent onLeverPulled;          // Evento para animações / sons
+    public UnityEvent onLeverReset;           // Evento para resetar a animação
 
-    [HideInInspector] public bool isActive;   
+    [HideInInspector] public bool isActive;   // Estado da alavanca (puxada ou não)
 
     private LeverPuzzle puzzleManager;
 
@@ -21,6 +21,7 @@ public class Lever : MonoBehaviour
 
     [Tooltip("Som tocado ao resetar a alavanca")]
     public EventReference leverResetEvent;
+
 
     private void Start()
     {
@@ -37,11 +38,6 @@ public class Lever : MonoBehaviour
         {   
             puzzleManager.TryActivateLever(this);
         }
-        else
-        {
-            // Se não houver puzzleManager, alterna manualmente
-            SetState(!isActive);
-        }
     }
 
     /// <summary>
@@ -54,24 +50,20 @@ public class Lever : MonoBehaviour
         if (active)
         {
             // Dispara animação e eventos de puxar
-            onLeverPulled?.Invoke();
+            onLeverPulled.Invoke();
 
             // Toca som de puxar (FMOD)
-            if (!string.IsNullOrEmpty(leverPulledEvent.Path))
+            if (leverPulledEvent.IsNull == false)
                 RuntimeManager.PlayOneShot(leverPulledEvent, transform.position);
-            else
-                Debug.LogWarning("Lever: Evento de som de puxar não atribuído!");
         }
         else
         {
             // Dispara animação e eventos de resetar
-            onLeverReset?.Invoke();
+            onLeverReset.Invoke();
 
             // Toca som de resetar (FMOD)
-            if (!string.IsNullOrEmpty(leverResetEvent.Path))
+            if (leverResetEvent.IsNull == false)
                 RuntimeManager.PlayOneShot(leverResetEvent, transform.position);
-            else
-                Debug.LogWarning("Lever: Evento de som de resetar não atribuído!");
         }
     }
 }
