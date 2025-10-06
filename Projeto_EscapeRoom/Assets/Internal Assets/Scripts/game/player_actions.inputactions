@@ -9,7 +9,7 @@
                     "name": "Move",
                     "type": "Value",
                     "id": "e83c7337-e23e-488e-b801-0936a878cfe1",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
@@ -197,17 +197,6 @@
                     "name": "",
                     "id": "5686173b-e951-4e36-a4b2-6213348f8e14",
                     "path": "<Keyboard>/q",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "InteractionExit",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "255d47ba-085a-4c7b-a94a-e78474ca554e",
-                    "path": "<Touchscreen>/touch2/indirectTouch",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

@@ -8,7 +8,9 @@ public class Move_player : MonoBehaviour
     public CharacterController player_actions;
     public float speed = 12f;
     public float gravity = -9.81f;
+
     public UnityEvent<Vector2> OnMoveInput;
+
     private float horizontalInput;
     private float verticalInput;
     private float verticalVelocity;
