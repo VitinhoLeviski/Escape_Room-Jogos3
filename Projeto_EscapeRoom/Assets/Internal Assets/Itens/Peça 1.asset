@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredItem: 1
   grabbable: 1
-  text: a zeus marble
-  image: {fileID: 0}
+  text: There's a Zeus picture
+  image: {fileID: 21300000, guid: 14156cedb933ab44f995904e6a5fd24d, type: 3}
   InventoryItem: 1
   collectMessage: 
-  leveranim: {fileID: 0}
