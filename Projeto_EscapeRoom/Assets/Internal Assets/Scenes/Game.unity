@@ -7361,7 +7361,7 @@ MonoBehaviour:
     OnInteract:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 496475000}
+        - m_Target: {fileID: 0}
           m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
           m_MethodName: set_fireEvents
           m_Mode: 6
@@ -7380,27 +7380,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isMoving: 0
---- !u!95 &496475000
-Animator:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 496474998}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: e5a670a4f5ba0a44ea715a51b751cb30, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorStateOnDisable: 0
-  m_WriteDefaultValuesOnDisable: 0
 --- !u!65 &496475001
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7464,6 +7443,7 @@ MonoBehaviour:
       Data3: 806146690
       Data4: -1256605491
     Path: event:/Enigma Errado
+  puzzlecompleto: 1
 --- !u!114 &496475003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8230,6 +8210,37 @@ MonoBehaviour:
       Data3: 806146690
       Data4: -1256605491
     Path: event:/Enigma Errado
+--- !u!114 &541545230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 541545224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33103976
+      Data2: 1080428195
+      Data3: -544557420
+      Data4: -941955
+    Path: event:/Enigma Certo
+  Event: 
+  EventPlayTrigger: 15
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &571081702 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -186008225417200978, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
@@ -9086,7 +9097,7 @@ RectTransform:
   - {fileID: 1358287046}
   - {fileID: 707522155}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -10626,6 +10637,37 @@ MonoBehaviour:
       Data3: 806146690
       Data4: -1256605491
     Path: event:/Enigma Errado
+--- !u!114 &812352195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 812352189}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33103976
+      Data2: 1080428195
+      Data3: -544557420
+      Data4: -941955
+    Path: event:/Enigma Certo
+  Event: 
+  EventPlayTrigger: 15
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &812970675
 GameObject:
   m_ObjectHideFlags: 0
@@ -19072,6 +19114,37 @@ MonoBehaviour:
       Data3: 806146690
       Data4: -1256605491
     Path: event:/Enigma Errado
+--- !u!114 &1162351895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1162351889}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33103976
+      Data2: 1080428195
+      Data3: -544557420
+      Data4: -941955
+    Path: event:/Enigma Certo
+  Event: 
+  EventPlayTrigger: 15
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1182381918 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4783214817553142398, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
@@ -29212,6 +29285,37 @@ MonoBehaviour:
       Data3: 806146690
       Data4: -1256605491
     Path: event:/Enigma Errado
+--- !u!114 &1449667474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1449667468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33103976
+      Data2: 1080428195
+      Data3: -544557420
+      Data4: -941955
+    Path: event:/Enigma Certo
+  Event: 
+  EventPlayTrigger: 15
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1455786114 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3225359543238603763, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
@@ -36365,7 +36469,6 @@ GameObject:
   - component: {fileID: 1836151483}
   - component: {fileID: 1836151482}
   - component: {fileID: 1836151481}
-  - component: {fileID: 1836151484}
   m_Layer: 5
   m_Name: CursorImage
   m_TagString: Untagged
@@ -36429,21 +36532,8 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_SizeDelta: {x: 50, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1836151484
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1836151480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d54531977ecb194c95e2d3aa7a5d72a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ControlPath: <Touchscreen>/touch1/indirectTouch
 --- !u!1 &1842482408 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4461995864268703097, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
@@ -38238,6 +38328,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7a6371d569c3649b3d654617b94b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  puzzle: {fileID: 496475002}
+--- !u!65 &1988672203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653876654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.3982124, y: 2.702696, z: 0.2989201}
+  m_Center: {x: -2.5690956, y: 0.8513515, z: 0.09346558}
 --- !u!1 &1992192064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3412027909320710538, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
