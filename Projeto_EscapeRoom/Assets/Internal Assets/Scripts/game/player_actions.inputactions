@@ -58,15 +58,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Pause",
-                    "type": "Button",
-                    "id": "ed244af7-baf7-4d35-9b3a-f9df59e82bb6",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -254,17 +245,6 @@
                     "processors": "",
                     "groups": "",
                     "action": "InventoryEvent",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "92ddca83-cea7-44f5-a1e8-5fee357bc8e5",
-                    "path": "<Touchscreen>/touch7/indirectTouch",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Pause",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

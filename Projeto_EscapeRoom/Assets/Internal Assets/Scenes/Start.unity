@@ -387,14 +387,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 235101475}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 415.5, y: 443.8, z: -1038}
   m_LocalScale: {x: 35, y: 35.115025, z: 35}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1440370407}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &235101480
 MonoBehaviour:
@@ -504,7 +504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33dfb2e2fa2ea2f45a39f02548afbd86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensitivity: 30
+  mouseSensitivity: 20
   cameraTransform: {fileID: 1440370407}
 --- !u!114 &235101483
 MonoBehaviour:
@@ -519,7 +519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player_actions: {fileID: 235101481}
-  speed: 85
+  speed: 83
   gravity: -9.81
   OnMoveInput:
     m_PersistentCalls:
@@ -9484,7 +9484,7 @@ RectTransform:
   - {fileID: 375644567}
   - {fileID: 1524072645}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -9523,7 +9523,7 @@ Transform:
   - {fileID: 751409199}
   - {fileID: 561398280}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1049115103
 GameObject:
@@ -10125,5 +10125,5 @@ Transform:
   - {fileID: 1049115105}
   - {fileID: 164393609}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
