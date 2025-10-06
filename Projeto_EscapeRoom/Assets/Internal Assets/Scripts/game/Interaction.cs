@@ -22,8 +22,13 @@ public class Interaction : MonoBehaviour
 
     private bool isViewing;
     private bool canFinish;
+    public GameObject ima1;
+    public GameObject ima2;
+    public GameObject ima3;
 
-    private Interactables currentInteractable;
+
+
+    [HideInInspector] public Interactables currentInteractable;
     private Item currentItem;
     private Vector3 originPosition;
     private Quaternion originRotation;
@@ -119,6 +124,23 @@ public class Interaction : MonoBehaviour
                             StartCoroutine(
                                 MovingObject(currentInteractable, objectViewer.position)
                             );
+                        }
+                        if (currentInteractable.item.destroy1)
+                        {
+                            Destroy(ima1);
+                            FinishView();
+                            
+                        }
+                        if (currentInteractable.item.destroy2)
+                        {
+                            Destroy(ima2);
+                            FinishView();
+
+                        }
+                        if (currentInteractable.item.destroy3)
+                        {
+                            Destroy(ima3);
+                            FinishView();
                         }
                     }
                 }

@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: "Pe\xE7a 2"
   m_EditorClassIdentifier: 
   requiredItem: 0
-  grabbable: 0
-  text: 
+  grabbable: 1
+  destroy1: 0
+  destroy2: 1
+  destroy3: 0
+  text: The Hercules marble
   image: {fileID: 21300000, guid: 9c51f1d462443a14ebb4eaaa96f987ed, type: 3}
   InventoryItem: 0
   collectMessage: 
