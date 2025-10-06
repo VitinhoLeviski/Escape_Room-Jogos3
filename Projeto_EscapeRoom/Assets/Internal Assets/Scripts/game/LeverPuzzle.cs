@@ -23,6 +23,9 @@ public class LeverPuzzle : MonoBehaviour
     [Tooltip("Evento FMOD para o som de alavanca errada")]
     public EventReference enigmaErradoEvent;
 
+    [Header("Estado do Puzzle")]
+    public bool puzzlecompleto = false;
+
     /// <summary>
     /// Chamado por cada alavanca quando o jogador interage com ela.
     /// </summary>
@@ -31,16 +34,17 @@ public class LeverPuzzle : MonoBehaviour
         if (levers[currentIndex] == lever)
         {
             // Alavanca correta
-            lever.SetState(true);       
+            lever.SetState(true);
             currentIndex++;
 
             // Toca som de acerto (FMOD)
-            if (enigmaCertoEvent.IsNull == false)
+            if (!enigmaCertoEvent.IsNull)
                 RuntimeManager.PlayOneShot(enigmaCertoEvent, transform.position);
 
             // Puzzle completo
             if (currentIndex >= levers.Length)
             {
+                puzzlecompleto = true;
                 Debug.Log("Enigma resolvido!");
                 onPuzzleSolved.Invoke();
             }
@@ -51,7 +55,7 @@ public class LeverPuzzle : MonoBehaviour
             Debug.Log("Ordem incorreta! Resetando puzzle...");
 
             // Toca som de erro (FMOD)
-            if (enigmaErradoEvent.IsNull == false)
+            if (!enigmaErradoEvent.IsNull)
                 RuntimeManager.PlayOneShot(enigmaErradoEvent, transform.position);
 
             ResetPuzzle();
@@ -69,6 +73,7 @@ public class LeverPuzzle : MonoBehaviour
         }
 
         currentIndex = 0;
+        puzzlecompleto = false;
         onPuzzleReset.Invoke();
     }
 }
