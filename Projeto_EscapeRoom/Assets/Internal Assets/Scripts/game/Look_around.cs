@@ -25,7 +25,7 @@ public class Look_around : MonoBehaviour
     }
     void Start()
     {
-         Cursor.lockState = CursorLockMode.Locked;
+        //  Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Chamado via PlayerInput (Unity Events)
