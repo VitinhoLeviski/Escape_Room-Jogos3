@@ -29,7 +29,6 @@ public class CoinPuzzle : MonoBehaviour
 
 
     private GameObject[] placedCoins = new GameObject[5];
-    public GameObject game;
 
 
     private bool puzzleSolved = false;
