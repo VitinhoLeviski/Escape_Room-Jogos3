@@ -9,6 +9,9 @@ public class Item : ScriptableObject
 
 	public bool grabbable;
 
+	public bool destroy1;
+	public bool destroy2;
+	public bool destroy3;
 	public string text;
 	public Sprite image;
 

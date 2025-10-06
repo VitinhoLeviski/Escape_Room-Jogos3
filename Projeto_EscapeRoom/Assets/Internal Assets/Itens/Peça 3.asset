@@ -13,8 +13,11 @@ MonoBehaviour:
   m_Name: "Pe\xE7a 3"
   m_EditorClassIdentifier: 
   requiredItem: 0
-  grabbable: 0
-  text: 
+  grabbable: 1
+  destroy1: 0
+  destroy2: 0
+  destroy3: 1
+  text: The Athena marble
   image: {fileID: 21300000, guid: 6e3bdfd9458d0154b87644b6b9393952, type: 3}
   InventoryItem: 0
   collectMessage: 
