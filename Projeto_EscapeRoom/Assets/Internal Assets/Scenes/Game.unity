@@ -9017,7 +9017,7 @@ RectTransform:
   - {fileID: 1358287046}
   - {fileID: 707522155}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -38130,8 +38130,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba7a6371d569c3649b3d654617b94b12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  finalPuzzle: {fileID: 496475002}
-  playerTag: Player
+--- !u!65 &1988672203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1653876654}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.978442, y: 3.0473516, z: 0.7526229}
+  m_Center: {x: -3.9563205, y: 1.0236769, z: 0.4481181}
 --- !u!1 &1992192064 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3412027909320710538, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
