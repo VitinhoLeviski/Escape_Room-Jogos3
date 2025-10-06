@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   requiredItem: 0
   grabbable: 0
-  text: 
-  image: {fileID: 21300000, guid: 9c51f1d462443a14ebb4eaaa96f987ed, type: 3}
-  InventoryItem: 0
+  text: There's a Hercules picture
+  image: {fileID: 21300000, guid: f3d0fd0d48f5b594f8ea91943be4f273, type: 3}
+  InventoryItem: 1
   collectMessage: 
