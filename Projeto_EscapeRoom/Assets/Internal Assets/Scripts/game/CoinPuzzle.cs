@@ -40,6 +40,8 @@ public class CoinPuzzle : MonoBehaviour
     // Ordem fixa
     private CoinType[] coinOrder = { CoinType.Odisseu, CoinType.Ithaca, CoinType.Troia };
 
+
+
     void Start()
     {
   
@@ -196,6 +198,7 @@ public void ReceiveInputSequence(string input)
 {
     if (puzzleSolved)
     {
+        
         return;
     }
 
