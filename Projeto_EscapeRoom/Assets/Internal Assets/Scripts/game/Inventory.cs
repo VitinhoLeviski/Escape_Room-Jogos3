@@ -10,7 +10,6 @@ public class WinCondition
 	public List<Item> interactedItens;
 	//public CutsceneController winCutscene;
 	public bool alreadyPlayed;
-	private bool naosei;
 }
 
 public class Inventory : MonoBehaviour
