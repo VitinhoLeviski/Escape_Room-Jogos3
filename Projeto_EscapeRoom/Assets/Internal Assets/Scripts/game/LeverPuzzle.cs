@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using FMODUnity;
-using FMOD.Studio;
 
 public class LeverPuzzle : MonoBehaviour
 {
@@ -16,13 +15,6 @@ public class LeverPuzzle : MonoBehaviour
     public UnityEvent onPuzzleSolved;   // Evento disparado quando todas as alavancas são ativadas na ordem correta
     public UnityEvent onPuzzleReset;    // Evento disparado quando o puzzle é resetado
 
-    [Header("Sons do Enigma (FMOD)")]
-    [Tooltip("Evento FMOD para o som de alavanca correta")]
-    public EventReference enigmaCertoEvent;
-
-    [Tooltip("Evento FMOD para o som de alavanca errada")]
-    public EventReference enigmaErradoEvent;
-
     /// <summary>
     /// Chamado por cada alavanca quando o jogador interage com ela.
     /// </summary>
@@ -30,30 +22,21 @@ public class LeverPuzzle : MonoBehaviour
     {
         if (levers[currentIndex] == lever)
         {
-            // Alavanca correta
-            lever.SetState(true);       
+            // ✅ Alavanca correta
+            lever.SetState(true);       // Ativa a alavanca
             currentIndex++;
-
-            // Toca som de acerto (FMOD)
-            if (enigmaCertoEvent.IsNull == false)
-                RuntimeManager.PlayOneShot(enigmaCertoEvent, transform.position);
 
             // Puzzle completo
             if (currentIndex >= levers.Length)
             {
-                Debug.Log("Enigma resolvido!");
+                Debug.Log("✅ Enigma resolvido!");
                 onPuzzleSolved.Invoke();
             }
         }
         else
         {
-            // Alavanca errada → Resetar
-            Debug.Log("Ordem incorreta! Resetando puzzle...");
-
-            // Toca som de erro (FMOD)
-            if (enigmaErradoEvent.IsNull == false)
-                RuntimeManager.PlayOneShot(enigmaErradoEvent, transform.position);
-
+            // ❌ Ordem errada → Resetar
+            Debug.Log("❌ Ordem incorreta! Resetando puzzle...");
             ResetPuzzle();
         }
     }
