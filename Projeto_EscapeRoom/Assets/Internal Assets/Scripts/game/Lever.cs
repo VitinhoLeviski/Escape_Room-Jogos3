@@ -15,13 +15,6 @@ public class Lever : MonoBehaviour
 
     private LeverPuzzle puzzleManager;
 
-    [Header("Sons da Alavanca (FMOD)")]
-    [Tooltip("Som tocado ao puxar a alavanca")]
-    public EventReference leverPulledEvent;
-
-    [Tooltip("Som tocado ao resetar a alavanca")]
-    public EventReference leverResetEvent;
-
 
     private void Start()
     {
@@ -51,19 +44,6 @@ public class Lever : MonoBehaviour
         {
             // Dispara animação e eventos de puxar
             onLeverPulled.Invoke();
-
-            // Toca som de puxar (FMOD)
-            if (leverPulledEvent.IsNull == false)
-                RuntimeManager.PlayOneShot(leverPulledEvent, transform.position);
-        }
-        else
-        {
-            // Dispara animação e eventos de resetar
-            onLeverReset.Invoke();
-
-            // Toca som de resetar (FMOD)
-            if (leverResetEvent.IsNull == false)
-                RuntimeManager.PlayOneShot(leverResetEvent, transform.position);
         }
     }
 }
