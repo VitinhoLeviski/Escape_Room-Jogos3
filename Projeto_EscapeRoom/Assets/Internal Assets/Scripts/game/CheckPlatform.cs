@@ -6,6 +6,7 @@ public class CheckPlatform : MonoBehaviour
 {
     public GameObject Controle1;
     public GameObject Controle2;
+    public GameObject InputField;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,8 @@ public class CheckPlatform : MonoBehaviour
         {
             Controle1.SetActive(false);
             Controle2.SetActive(false);
+            InputField.SetActive(false);
+
         }
     }
 

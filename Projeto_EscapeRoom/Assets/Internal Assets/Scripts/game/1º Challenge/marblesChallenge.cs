@@ -15,6 +15,8 @@ public class marblesChallenge : MonoBehaviour
     public GameObject quadro2;
     public GameObject quadro3;
 
+    public GameObject LivroMoeda;
+
     Interaction inter;
     bool pegou1 = false;
     bool pegou2 = false;
@@ -96,6 +98,7 @@ public class marblesChallenge : MonoBehaviour
         if (parte1feita && parte2feita && parte3feita)
         {
             desafioFeito = true;
+            LivroMoeda.SetActive(true);
         }
     }
 }

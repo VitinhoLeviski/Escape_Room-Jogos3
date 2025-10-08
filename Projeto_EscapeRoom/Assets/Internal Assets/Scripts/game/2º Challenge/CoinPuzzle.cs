@@ -10,12 +10,13 @@ public class CoinPuzzle : MonoBehaviour
     public GameObject MoedaIthaca;
     public GameObject MoedaTroia;
 
+    public GameObject CoinsCorrects;
+
     [Header("Slots")]
     public Transform[] slots; 
 
     [Header("Puzzle Solution")]
     [SerializeField] private CoinType[] correctCombination = new CoinType[5]; 
-    // Enum para tipos de moedas 
     public enum CoinType
     {
         None,      // Slot vazio
@@ -36,7 +37,6 @@ public class CoinPuzzle : MonoBehaviour
     // Lista para coletar os slots digitados
     private List<int> selectedSlots = new List<int>();
 
-    // Ordem fixa
     private CoinType[] coinOrder = { CoinType.Odisseu, CoinType.Ithaca, CoinType.Troia };
 
     void Start()
