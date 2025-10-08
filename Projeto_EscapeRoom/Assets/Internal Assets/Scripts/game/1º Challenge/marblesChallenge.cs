@@ -23,6 +23,7 @@ public class marblesChallenge : MonoBehaviour
     bool parte2feita = false;
     bool parte3feita = false;
     public bool desafioFeito = false;
+    
 
 
     // Start is called before the first frame update
@@ -41,25 +42,25 @@ public class marblesChallenge : MonoBehaviour
 
     private void destroyMarbles()
     {
-        if (inter.currentInteractable.item.destroy1)
+        if (inter != null && inter.currentInteractable != null && inter.currentInteractable.item != null)
         {
-            Destroy(peca1);
-            pegou1 = true;
-            peca1.SetActive(false);
-        }
+            if (inter.currentInteractable.item.destroy1)
+            {
+                peca1.SetActive(false);
+                pegou1 = true;
+            }
 
-        if (inter.currentInteractable.item.destroy2)
-        {
-            Destroy(peca2);
-            pegou2 = true;
-            peca2.SetActive(false);
-        }
+            if (inter.currentInteractable.item.destroy2)
+            {
+                peca2.SetActive(false);
+                pegou2 = true;
+            }
 
-        if (inter.currentInteractable.item.destroy3)
-        {
-            Destroy(peca3);
-            pegou3 = true;
-            peca3.SetActive(false);
+            if (inter.currentInteractable.item.destroy3)
+            {
+                peca3.SetActive(false);
+                pegou3 = true;
+            }
         }
     }
 
@@ -69,18 +70,24 @@ public class marblesChallenge : MonoBehaviour
         {
             ativapeca1.SetActive(true);
             parte1feita = true;
+            pegou1 = false;
+            inter.FinishView();
         }
 
         if (pegou2 && inter.currentInteractable.item.picture2)
         {
             ativapeca2.SetActive(true);
             parte2feita = true;
+            pegou2 = false;
+            inter.FinishView();
         }
 
         if (pegou3 && inter.currentInteractable.item.picture3)
         {
             ativapeca3.SetActive(true);
             parte3feita = true;
+            pegou3 = false;
+            inter.FinishView();
         }
     }
 

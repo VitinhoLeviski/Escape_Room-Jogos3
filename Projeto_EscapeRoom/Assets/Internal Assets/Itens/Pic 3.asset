@@ -19,7 +19,7 @@ MonoBehaviour:
   destroy3: 0
   picture1: 0
   picture2: 0
-  picture3: 0
+  picture3: 1
   text: Athena's marble placed
   image: {fileID: 0}
   InventoryItem: 0

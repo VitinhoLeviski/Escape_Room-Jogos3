@@ -8,6 +8,11 @@ public class terminarjogo : MonoBehaviour
     [Header("Referência para o Script do Puzzle")]
     public LeverPuzzle puzzle; // Arraste o objeto com o script LeverPuzzle no Inspector
     public marblesChallenge marbles;
+
+    void Start() {
+        puzzle = GetComponent<LeverPuzzle>();
+        marbles = GetComponent<marblesChallenge>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))

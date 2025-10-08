@@ -18,7 +18,7 @@ MonoBehaviour:
   destroy2: 0
   destroy3: 0
   picture1: 0
-  picture2: 0
+  picture2: 1
   picture3: 0
   text: Hercules's marble placed
   image: {fileID: 0}

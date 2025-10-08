@@ -174,7 +174,7 @@ public class Interaction : MonoBehaviour
         UIManager.instance.SetCaptions("");
     }
 
-    void FinishView()
+    public void FinishView()
     {
         canFinish = false;
         isViewing = false;
