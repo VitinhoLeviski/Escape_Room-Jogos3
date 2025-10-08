@@ -14,6 +14,9 @@ public class UIManager_Menu : MonoBehaviour
     [SerializeField] Button setButton;
     [SerializeField] EventReference menuSound;
     [SerializeField] EventReference starGameSound;
+    [SerializeField] GameObject TextNome;
+
+    [SerializeField] GameObject ControlesImage;
     [SerializeField] private GameObject PNG_starterMenu;
     [SerializeField] private GameObject starterMenuButtons;
     [SerializeField] private GameObject settingsMenuButtons;
@@ -50,6 +53,7 @@ public class UIManager_Menu : MonoBehaviour
         RuntimeManager.PlayOneShot(menuSound);
         starterMenuButtons.SetActive(false);
         settingsMenuButtons.SetActive(true);
+        TextNome.SetActive(true);
     }
 
     public void backStarterMenu()
@@ -57,6 +61,16 @@ public class UIManager_Menu : MonoBehaviour
         RuntimeManager.PlayOneShot(menuSound);
         starterMenuButtons.SetActive(true);
         settingsMenuButtons.SetActive(false);
+        TextNome.SetActive(false);
+        ControlesImage.SetActive(false);
+    }
+
+    public void Controls()
+    {
+        RuntimeManager.PlayOneShot(menuSound);
+        starterMenuButtons.SetActive(false);
+        settingsMenuButtons.SetActive(true);
+        ControlesImage.SetActive(true);
     }
 
 
