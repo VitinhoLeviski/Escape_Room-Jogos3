@@ -29,7 +29,7 @@ public class Interaction : MonoBehaviour
 
 
     [HideInInspector] public Interactables currentInteractable;
-    private Item currentItem;
+    [HideInInspector] public Item currentItem;
     private Vector3 originPosition;
     private Quaternion originRotation;
     private Inventory inventory;
@@ -124,23 +124,6 @@ public class Interaction : MonoBehaviour
                             StartCoroutine(
                                 MovingObject(currentInteractable, objectViewer.position)
                             );
-                        }
-                        if (currentInteractable.item.destroy1)
-                        {
-                            Destroy(ima1);
-                            FinishView();
-                            
-                        }
-                        if (currentInteractable.item.destroy2)
-                        {
-                            Destroy(ima2);
-                            FinishView();
-
-                        }
-                        if (currentInteractable.item.destroy3)
-                        {
-                            Destroy(ima3);
-                            FinishView();
                         }
                     }
                 }

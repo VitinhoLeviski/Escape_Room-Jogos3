@@ -7,13 +7,13 @@ public class terminarjogo : MonoBehaviour
 {
     [Header("Referência para o Script do Puzzle")]
     public LeverPuzzle puzzle; // Arraste o objeto com o script LeverPuzzle no Inspector
-
+    public marblesChallenge marbles;
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             // Verifica se o puzzle está completo
-            if (puzzle != null && puzzle.puzzlecompleto)
+            if (puzzle != null && puzzle.puzzlecompleto && marbles.desafioFeito)
             {
 #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false; // Para no editor

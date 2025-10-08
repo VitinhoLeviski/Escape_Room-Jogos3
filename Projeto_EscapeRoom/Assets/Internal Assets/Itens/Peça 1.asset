@@ -13,10 +13,13 @@ MonoBehaviour:
   m_Name: "Pe\xE7a 1"
   m_EditorClassIdentifier: 
   requiredItem: 0
-  grabbable: 1
+  grabbable: 0
   destroy1: 1
   destroy2: 0
   destroy3: 0
+  picture1: 0
+  picture2: 0
+  picture3: 0
   text: The zeus Marble
   image: {fileID: 0}
   InventoryItem: 0

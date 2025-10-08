@@ -12,6 +12,10 @@ public class Item : ScriptableObject
 	public bool destroy1;
 	public bool destroy2;
 	public bool destroy3;
+	public bool picture1;
+	public bool picture2;
+	public bool picture3;
+
 	public string text;
 	public Sprite image;
 

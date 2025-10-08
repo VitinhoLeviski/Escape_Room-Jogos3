@@ -10,17 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65184b73c09377d4bb96838c3a073031, type: 3}
-  m_Name: "Pe\xE7a 2"
+  m_Name: Pic 1
   m_EditorClassIdentifier: 
   requiredItem: 0
   grabbable: 0
   destroy1: 0
-  destroy2: 1
+  destroy2: 0
   destroy3: 0
-  picture1: 0
+  picture1: 1
   picture2: 0
   picture3: 0
-  text: The Hercules marble
+  text: Zeus's marble placed
   image: {fileID: 0}
   InventoryItem: 0
   collectMessage: 
