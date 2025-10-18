@@ -15,6 +15,6 @@ EditorBuildSettings:
     path: Assets/Internal Assets/Scenes/Game.unity
     guid: 213be2e4ca010474392a2a0c7b847cbc
   - enabled: 1
-    path: Assets/Internal Assets/Scenes/Flawless Victory.unity
+    path: Assets/Internal Assets/Scenes/Victory.unity
     guid: 1c130795f26ec4245beb2a148f5ecdea
   m_configObjects: {}
