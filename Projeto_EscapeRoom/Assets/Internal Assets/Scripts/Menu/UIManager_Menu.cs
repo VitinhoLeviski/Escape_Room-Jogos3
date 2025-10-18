@@ -39,7 +39,7 @@ public class UIManager_Menu : MonoBehaviour
 
     public void startGame()
     {
-        SceneManager.LoadScene("Start");
+        SceneManager.LoadScene("Game");
     }
 
 
