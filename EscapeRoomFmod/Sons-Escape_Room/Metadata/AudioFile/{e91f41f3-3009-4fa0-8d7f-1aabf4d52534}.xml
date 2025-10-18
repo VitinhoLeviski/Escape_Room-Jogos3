@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="AudioFile" id="{e91f41f3-3009-4fa0-8d7f-1aabf4d52534}">
+		<property name="assetPath">
+			<value>PuzzleFalho.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>16.50938775510204</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{3f470c91-5369-4f48-8952-ee171fb74fbe}</destination>
+		</relationship>
+	</object>
+</objects>

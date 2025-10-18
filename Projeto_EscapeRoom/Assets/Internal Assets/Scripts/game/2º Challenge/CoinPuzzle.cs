@@ -5,15 +5,21 @@ using UnityEngine.UI;
 
 public class CoinPuzzle : MonoBehaviour
 {
+    public GameObject pergaminho;
+
     [Header("Coin Prefabs")]
     public GameObject MoedaOdisseu;
     public GameObject MoedaIthaca;
     public GameObject MoedaTroia;
 
-    public GameObject CoinsCorrects;
 
     [Header("Slots")]
-    public Transform[] slots; 
+    public Transform[] slots;
+
+    [Header("Feedback Visual")]
+    public Image imagemErro;
+    public Image imagemAcerto;
+    public float tempoExibicao = 2f;
 
     [Header("Puzzle Solution")]
     [SerializeField] private CoinType[] correctCombination = new CoinType[5]; 
@@ -62,6 +68,16 @@ public class CoinPuzzle : MonoBehaviour
         correctCombination[4] = CoinType.Troia;    // Slot 5 (índice 4)
 
         selectedSlots.Clear();
+
+        if (imagemErro != null)
+        {
+            imagemErro.gameObject.SetActive(false);
+        }
+        if (imagemAcerto != null)
+        {
+            imagemAcerto.gameObject.SetActive(false);
+        }
+
     }
 
     void Update()
@@ -106,19 +122,29 @@ public class CoinPuzzle : MonoBehaviour
         {
             int slotNumber = selectedSlots[i];
             int slotIndex = slotNumber - 1;
-            CoinType coinType = coinOrder[i]; 
+            CoinType coinType = coinOrder[i];
 
-  
+            if (slotIndex < 0 || slotIndex >= slots.Length)
+            {
+                continue;
+            }
+
+            // Verifica se o slot existe
+            if (slots[slotIndex] == null)
+            {
+                continue;
+            }
+
+
             GameObject coinPrefab = GetCoinPrefab(coinType);
             if (coinPrefab != null)
             {
                 placedCoins[slotIndex] = Instantiate(coinPrefab, slots[slotIndex].position, slots[slotIndex].rotation, slots[slotIndex]);
                 currentCombination[slotIndex] = coinType;
-                Debug.Log("Moeda " + coinType + " colocada no slot " + slotNumber + " (índice " + slotIndex + ")");
             }
             else
             {
-                Debug.LogError("Prefab da moeda " + coinType + " não encontrado!");
+
             }
         }
 
@@ -149,11 +175,34 @@ public class CoinPuzzle : MonoBehaviour
         if (isCorrect)
         {
             puzzleSolved = true;
-            Debug.Log("Enigma resolvido!");
+            MostrarAcerto();
+            pergaminho.SetActive(true);
         }
         else
         {
-            
+            MostrarErro();
+        }
+    }
+
+
+    private void MostrarErro()
+    {
+        StartCoroutine(ExibirImagem(imagemErro));
+    }
+
+    private void MostrarAcerto()
+    {
+        StartCoroutine(ExibirImagem(imagemAcerto));
+    }
+
+
+    private IEnumerator ExibirImagem(Image imagem)
+    {
+        if (imagem != null)
+        {
+            imagem.gameObject.SetActive(true);
+            yield return new WaitForSeconds(tempoExibicao);
+            imagem.gameObject.SetActive(false);
         }
     }
 
