@@ -29,10 +29,6 @@ public class ImagemFinal : MonoBehaviour
     private IEnumerator ExibirTelaVitoria()
     {
 
-        if (imagemVitoria != null)
-        {
-            imagemVitoria.gameObject.SetActive(true);
-        }
 
         yield return new WaitForSeconds(tempoExibicao);
 

@@ -54,7 +54,7 @@ public class LeverPuzzle : MonoBehaviour
             // Alavanca errada → Resetar
             Debug.Log("Ordem incorreta! Resetando puzzle...");
 
-            // Toca som de erro (FMOD)
+
             if (!enigmaErradoEvent.IsNull)
                 RuntimeManager.PlayOneShot(enigmaErradoEvent, transform.position);
 
@@ -63,13 +63,13 @@ public class LeverPuzzle : MonoBehaviour
     }
 
     /// <summary>
-    /// Reseta todas as alavancas para o estado inicial.
+
     /// </summary>
     public void ResetPuzzle()
     {
         foreach (var lever in levers)
         {
-            lever.SetState(false);      // Volta cada alavanca
+            lever.SetState(false);
         }
 
         currentIndex = 0;
