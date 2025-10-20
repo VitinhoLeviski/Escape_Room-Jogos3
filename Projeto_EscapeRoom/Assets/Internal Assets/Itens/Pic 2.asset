@@ -20,7 +20,7 @@ MonoBehaviour:
   picture1: 0
   picture2: 1
   picture3: 0
-  text: Hercules's marble placed
+  text: "Preciso colocar a pe\xE7a de m\xE1rmore correta"
   image: {fileID: 0}
   InventoryItem: 0
   collectMessage: 
