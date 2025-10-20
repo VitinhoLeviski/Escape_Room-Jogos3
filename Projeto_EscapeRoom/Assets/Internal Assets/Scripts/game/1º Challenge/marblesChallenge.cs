@@ -76,7 +76,7 @@ public class marblesChallenge : MonoBehaviour
             parte1feita = true;
             pegou1 = false;
             inter.FinishView();
-        } else if(pegou1 = false && inter.currentInteractable.item.picture1) {
+        } else if(!pegou1 && inter.currentInteractable.item.picture1) {
             inter.currentInteractable.item.text = "Eu deveria procurar pela peca de Zeus"; 
         }
 
