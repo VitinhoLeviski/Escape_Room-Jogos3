@@ -27,10 +27,10 @@ public class CoinPuzzle : MonoBehaviour
     [SerializeField] private CoinType[] correctCombination = new CoinType[5]; 
     public enum CoinType
     {
-        None,   
-        Odisseu,   
-        Ithaca,    
-        Troia      
+        None,      // Slot vazio
+        Odisseu,   // Moeda de Odisseu
+        Ithaca,    // Moeda de Ítaca
+        Troia      // Moeda de Troia
     }
 
 
@@ -92,7 +92,7 @@ public class CoinPuzzle : MonoBehaviour
                 int slotNumber = i; // 1-5
                 int slotIndex = slotNumber - 1; // Converter para índice 0-4
 
-                // Verifica se o slot já foi selecionado 
+                // Verifica se o slot já foi selecionado (evita duplicatas)
                 if (selectedSlots.Contains(slotNumber))
                 {
                     Debug.LogWarning("Slot " + slotNumber + " já selecionado! Escolha outro.");
