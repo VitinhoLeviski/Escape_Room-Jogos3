@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class TimerController : MonoBehaviour
 {
     [Header("Configurações do Timer")]
-    public float tempoInicial = 300f; // 5 minutos em segundos
+    public float tempoInicial = 302f; // 5 minutos em segundos
     private float tempoRestante;
 
     [Header("Referência UI")]
