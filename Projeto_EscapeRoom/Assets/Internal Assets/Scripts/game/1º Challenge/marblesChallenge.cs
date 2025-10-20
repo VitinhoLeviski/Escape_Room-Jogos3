@@ -70,6 +70,7 @@ public class marblesChallenge : MonoBehaviour
     {
         if (pegou1 && inter.currentInteractable.item.picture1)
         {
+            inter.currentInteractable.item.text = "O mar";
             ativapeca1.SetActive(true);
             parte1feita = true;
             pegou1 = false;
