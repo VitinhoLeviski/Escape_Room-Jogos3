@@ -5345,7 +5345,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 770, y: -380}
+  m_AnchoredPosition: {x: 770, y: -299}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 1, y: 0}
 --- !u!114 &229741655
@@ -6035,7 +6035,6 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1246402253}
   - {fileID: 690535190}
   m_Father: {fileID: 635990776}
   m_RootOrder: 8
@@ -8036,8 +8035,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0040403395, y: 0.008869497, z: 0.004281025}
-  m_Center: {x: 0.0005238112, y: 0.0572473, z: -0.0072646495}
+  m_Size: {x: 0.0064905104, y: 0.008869497, z: 0.0060362904}
+  m_Center: {x: -0.00070126855, y: 0.057247017, z: -0.0063869776}
 --- !u!114 &496475002
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9017,7 +9016,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efc7e8ebbc55c4d448b86c99c29f5298, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagemVitoria: {fileID: 1246402254}
+  imagemVitoria: {fileID: 0}
   tempoExibicao: 3
 --- !u!65 &565604582
 BoxCollider:
@@ -10173,7 +10172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97d4fd4f0ae10894cba5faa160304127, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tempoInicial: 300
+  tempoInicial: 302
   timerText: {fileID: 487467583}
 --- !u!1 &639730931
 GameObject:
@@ -10560,7 +10559,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 304427201}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -10603,7 +10602,7 @@ MonoBehaviour:
       m_Calls: []
   m_Sprite: {fileID: 21300000, guid: ffb340c0f25ded54e835acaf4637364c, type: 3}
   m_Type: 0
-  m_PreserveAspect: 1
+  m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -20558,6 +20557,37 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isMoving: 0
+--- !u!114 &1119566539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1119566530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33103976
+      Data2: 1080428195
+      Data3: -544557420
+      Data4: -941955
+    Path: event:/Enigma Certo
+  Event: 
+  EventPlayTrigger: 15
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1121018543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -8815894898046502595, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
@@ -21486,82 +21516,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -8207700516374568843, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
---- !u!1 &1246402252
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1246402253}
-  - component: {fileID: 1246402255}
-  - component: {fileID: 1246402254}
-  m_Layer: 5
-  m_Name: Liberdade
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1246402253
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246402252}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 304427201}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1800, y: 1800}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1246402254
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246402252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: aa3fc2f3806c3c948bb9a0b5021407c5, type: 3}
-  m_Type: 0
-  m_PreserveAspect: 1
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &1246402255
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1246402252}
-  m_CullTransparentMesh: 1
 --- !u!1 &1246439887 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1831894263060061778, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
@@ -28240,7 +28194,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1358287046
 RectTransform:
   m_ObjectHideFlags: 0
@@ -34901,6 +34855,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_WoodBox_4
       objectReference: {fileID: 0}
+    - target: {fileID: 662836112800378179, guid: a89288d05164ef34da18b38197719a04, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a89288d05164ef34da18b38197719a04, type: 3}
 --- !u!1 &1591721904
@@ -40875,6 +40833,37 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isMoving: 0
+--- !u!114 &1925927544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 452657614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33103976
+      Data2: 1080428195
+      Data3: -544557420
+      Data4: -941955
+    Path: event:/Enigma Certo
+  Event: 
+  EventPlayTrigger: 15
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
 --- !u!1 &1927567258 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6723037957114484437, guid: 4eed427346f10014fa9363b0a7d16ce6, type: 3}
@@ -41465,7 +41454,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -770, y: -380}
+  m_AnchoredPosition: {x: -770, y: -308}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1972579940
@@ -43508,7 +43497,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 975849813, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: speed
-      value: 127.53
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 975849813, guid: 3e014f2c94e108240861b5c08cd038b9, type: 3}
       propertyPath: gravity
@@ -43865,3 +43854,34 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   isMoving: 0
+--- !u!114 &8619810336250159784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846999725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 33103976
+      Data2: 1080428195
+      Data3: -544557420
+      Data4: -941955
+    Path: event:/Enigma Certo
+  Event: 
+  EventPlayTrigger: 15
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20

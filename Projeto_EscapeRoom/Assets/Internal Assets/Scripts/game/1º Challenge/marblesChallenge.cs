@@ -70,6 +70,7 @@ public class marblesChallenge : MonoBehaviour
     {
         if (pegou1 && inter.currentInteractable.item.picture1)
         {
+            inter.currentInteractable.item.text = "Colocado o mármore de Zeus";
             ativapeca1.SetActive(true);
             parte1feita = true;
             pegou1 = false;
@@ -78,6 +79,7 @@ public class marblesChallenge : MonoBehaviour
 
         if (pegou2 && inter.currentInteractable.item.picture2)
         {
+            inter.currentInteractable.item.text = "Colocado o mármore do Hercules";
             ativapeca2.SetActive(true);
             parte2feita = true;
             pegou2 = false;
@@ -86,6 +88,7 @@ public class marblesChallenge : MonoBehaviour
 
         if (pegou3 && inter.currentInteractable.item.picture3)
         {
+            inter.currentInteractable.item.text = "Colocado o mármore da Athena";
             ativapeca3.SetActive(true);
             parte3feita = true;
             pegou3 = false;
