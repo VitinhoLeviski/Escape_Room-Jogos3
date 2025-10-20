@@ -10,20 +10,43 @@ public class terminarjogo : MonoBehaviour
     public Transform TrPortaR;
 
     private bool portaAberta = false;
-    private bool puzzleEstavaConcluido = false;
 
     private void Start()
     {
- 
-        if (puzzle != null)
+        // Debug para verificar se as referências estão corretas
+        if (puzzle == null)
         {
-            puzzleEstavaConcluido = puzzle.puzzlecompleto;
+            Debug.LogError("ERRO: Referência 'puzzle' está NULL! Arraste o objeto com LeverPuzzle no Inspector.");
+        }
+        else
+        {
+            Debug.Log("Referência do puzzle OK. Puzzle completo no Start: " + puzzle.puzzlecompleto);
+        }
+
+        if (TrPortaL == null)
+        {
+            Debug.LogError("ERRO: TrPortaL está NULL!");
+        }
+
+        if (TrPortaR == null)
+        {
+            Debug.LogError("ERRO: TrPortaR está NULL!");
         }
     }
 
     private void Update()
     {
-        if (puzzle != null && puzzle.puzzlecompleto && !puzzleEstavaConcluido && !portaAberta)
+        // Debug contínuo para monitorar o estado do puzzle
+        if (puzzle != null)
+        {
+            // Mostra o estado a cada 2 segundos
+            if (Time.frameCount % 120 == 0) // A cada ~2 segundos (60 FPS)
+            {
+                Debug.Log("Status do puzzle: " + puzzle.puzzlecompleto + " | Porta aberta: " + portaAberta);
+            }
+        }
+
+        if (puzzle != null && puzzle.puzzlecompleto && !portaAberta)
         {
             AbrirPorta();
         }
@@ -32,10 +55,28 @@ public class terminarjogo : MonoBehaviour
     private void AbrirPorta()
     {
         portaAberta = true;
-        puzzleEstavaConcluido = true;
 
-        TrPortaL.Rotate(0, 90, 0);
-        TrPortaR.Rotate(0, -90, 0);
+        Debug.Log("=== ABRINDO PORTA! ===");
+        Debug.Log("Puzzle completo: " + puzzle.puzzlecompleto);
 
+        if (TrPortaL != null)
+        {
+            TrPortaL.Rotate(0, 90, 0);
+            Debug.Log("Porta esquerda rotacionada para: " + TrPortaL.eulerAngles);
+        }
+        else
+        {
+            Debug.LogWarning("TrPortaL é null!");
+        }
+
+        if (TrPortaR != null)
+        {
+            TrPortaR.Rotate(0, -90, 0);
+            Debug.Log("Porta direita rotacionada para: " + TrPortaR.eulerAngles);
+        }
+        else
+        {
+            Debug.LogWarning("TrPortaR é null!");
+        }
     }
 }

@@ -26,14 +26,27 @@ public class LeverPuzzle : MonoBehaviour
     [Header("Estado do Puzzle")]
     public bool puzzlecompleto = false;
 
+    private void Start()
+    {
+        Debug.Log("=== LeverPuzzle Iniciado ===");
+        Debug.Log("Total de alavancas: " + levers.Length);
+        Debug.Log("Puzzle completo no Start: " + puzzlecompleto);
+    }
+
     /// <summary>
     /// Chamado por cada alavanca quando o jogador interage com ela.
     /// </summary>
     public void TryActivateLever(Lever lever)
     {
+        Debug.Log("=== TryActivateLever chamado ===");
+        Debug.Log("Alavanca recebida: " + lever.name);
+        Debug.Log("Index atual: " + currentIndex);
+        Debug.Log("Alavanca esperada: " + (currentIndex < levers.Length ? levers[currentIndex].name : "NENHUMA"));
+
         if (levers[currentIndex] == lever)
         {
             // Alavanca correta
+            Debug.Log("✓ ALAVANCA CORRETA! Progresso: " + (currentIndex + 1) + "/" + levers.Length);
             lever.SetState(true);
             currentIndex++;
 
@@ -45,15 +58,14 @@ public class LeverPuzzle : MonoBehaviour
             if (currentIndex >= levers.Length)
             {
                 puzzlecompleto = true;
-                Debug.Log("Enigma resolvido!");
+                Debug.Log("★★★ ENIGMA RESOLVIDO! puzzlecompleto = " + puzzlecompleto + " ★★★");
                 onPuzzleSolved.Invoke();
             }
         }
         else
         {
             // Alavanca errada → Resetar
-            Debug.Log("Ordem incorreta! Resetando puzzle...");
-
+            Debug.Log("✗ ORDEM INCORRETA! Resetando puzzle...");
 
             if (!enigmaErradoEvent.IsNull)
                 RuntimeManager.PlayOneShot(enigmaErradoEvent, transform.position);
@@ -63,10 +75,11 @@ public class LeverPuzzle : MonoBehaviour
     }
 
     /// <summary>
-
+    /// Reseta o puzzle
     /// </summary>
     public void ResetPuzzle()
     {
+        Debug.Log("=== RESETANDO PUZZLE ===");
         foreach (var lever in levers)
         {
             lever.SetState(false);
@@ -74,6 +87,7 @@ public class LeverPuzzle : MonoBehaviour
 
         currentIndex = 0;
         puzzlecompleto = false;
+        Debug.Log("Puzzle resetado. puzzlecompleto = " + puzzlecompleto);
         onPuzzleReset.Invoke();
     }
 }
