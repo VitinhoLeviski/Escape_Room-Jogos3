@@ -20,7 +20,7 @@ MonoBehaviour:
   picture1: 0
   picture2: 0
   picture3: 0
-  text: The Athena marble
+  text: "O m\xE1rmore da Ahena"
   image: {fileID: 0}
   InventoryItem: 0
   collectMessage: 

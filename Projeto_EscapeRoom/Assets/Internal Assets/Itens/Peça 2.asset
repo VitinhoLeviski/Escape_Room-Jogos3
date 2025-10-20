@@ -20,7 +20,7 @@ MonoBehaviour:
   picture1: 0
   picture2: 0
   picture3: 0
-  text: The Hercules marble
+  text: "O m\xE1rmore de Hercules"
   image: {fileID: 0}
   InventoryItem: 0
   collectMessage: 

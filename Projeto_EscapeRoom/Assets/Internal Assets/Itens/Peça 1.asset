@@ -20,7 +20,7 @@ MonoBehaviour:
   picture1: 0
   picture2: 0
   picture3: 0
-  text: The zeus Marble
+  text: "O m\xE1rmore de Zeus"
   image: {fileID: 0}
   InventoryItem: 0
   collectMessage: 
