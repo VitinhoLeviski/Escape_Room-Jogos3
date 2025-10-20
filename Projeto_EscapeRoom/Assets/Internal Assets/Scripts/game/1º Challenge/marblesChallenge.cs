@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
-using TMPro;
 
 public class marblesChallenge : MonoBehaviour
 {
@@ -15,8 +14,7 @@ public class marblesChallenge : MonoBehaviour
     public GameObject quadro1;
     public GameObject quadro2;
     public GameObject quadro3;
-    
-    public TMP_Text txtObjetivo;
+
     public GameObject LivroMoeda;
 
     Interaction inter;
@@ -46,7 +44,7 @@ public class marblesChallenge : MonoBehaviour
 
     private void destroyMarbles()
     {
-        if (inter.currentInteractable != null && inter.currentInteractable.item != null)
+        if (inter != null && inter.currentInteractable != null && inter.currentInteractable.item != null)
         {
             if (inter.currentInteractable.item.destroy1)
             {
@@ -76,8 +74,6 @@ public class marblesChallenge : MonoBehaviour
             parte1feita = true;
             pegou1 = false;
             inter.FinishView();
-        } else if(pegou1 = false && inter.currentInteractable.item.picture1) {
-            inter.currentInteractable.item.text = "Eu deveria procurar pela peca de Zeus"; 
         }
 
         if (pegou2 && inter.currentInteractable.item.picture2)
@@ -102,7 +98,6 @@ public class marblesChallenge : MonoBehaviour
         if (parte1feita && parte2feita && parte3feita)
         {
             desafioFeito = true;
-            txtObjetivo.text = "Para o que será que servem essas moedas";
             LivroMoeda.SetActive(true);
         }
     }

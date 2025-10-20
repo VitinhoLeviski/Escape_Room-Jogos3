@@ -17,8 +17,6 @@ public class Item : ScriptableObject
 	public bool picture3;
 
 	public string text;
-	
-	public bool pushable;
 	public Sprite image;
 
 	[Header("Inventory")]

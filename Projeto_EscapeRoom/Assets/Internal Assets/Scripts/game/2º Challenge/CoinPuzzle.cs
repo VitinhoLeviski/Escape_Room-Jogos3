@@ -2,11 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class CoinPuzzle : MonoBehaviour
 {
-    public TMP_Text txtObjetivo;
     public GameObject pergaminho;
 
     [Header("Coin Prefabs")]
@@ -179,7 +177,6 @@ public class CoinPuzzle : MonoBehaviour
             puzzleSolved = true;
             MostrarAcerto();
             pergaminho.SetActive(true);
-            txtObjetivo.text = "O que essas alavancas fazem, deve ter algo explicando-as";
         }
         else
         {
