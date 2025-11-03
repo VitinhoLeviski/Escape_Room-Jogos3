@@ -99,13 +99,13 @@ public class CoinPuzzle : MonoBehaviour
                 // Verifica se o slot já foi selecionado para evitar duplicatas
                 if (selectedSlots.Contains(slotNumber))
                 {
-                    Debug.LogWarning("Slot " + slotNumber + " já selecionado! Escolha outro.");
+
                     continue; // Pula para a próxima iteração
                 }
 
                 // Adiciona o slot à lista de selecionados
                 selectedSlots.Add(slotNumber);
-                Debug.Log("Slot " + slotNumber + " selecionado. Slots escolhidos até agora: " + string.Join(", ", selectedSlots));
+
 
                 // Se for o 3º input, processa a colocação das moedas e verifica a solução
                 if (selectedSlots.Count == 3)
